@@ -1,3 +1,9 @@
+"""
+Data Structure: Min-Heap
+State: dist map (best cost so far), skip stale heap pops
+Expansion Order: By increasing total cost
+Early Exit, as soon as you pop the goal from the heap"""
+
 import heapq
 
 

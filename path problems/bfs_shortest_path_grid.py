@@ -1,3 +1,9 @@
+"""
+Data Structure: FIFO Queue
+State: Visited set (first time you see a node is the best)
+Expansion Order: Layer by Layer
+Early Exit, as soon as you deque the goal"""
+
 from collections import deque
 
 
