@@ -7,9 +7,7 @@ Early Exit, as soon as you pop the goal from the heap"""
 import heapq
 
 
-def dijkstra_shortest_path_t_b(
-    grid: list[list[int]], start: tuple[int, int], dest: tuple[int, int]
-) -> list[tuple[int, int]]:
+def dijkstra_shortest_path_t_b(grid: list[list[int]]) -> list[tuple[int, int]]:
     """
     Find a path from start to dest minimizing energy:
       - Moving to equal or lower cell costs 0
@@ -42,7 +40,7 @@ def dijkstra_shortest_path_t_b(
         if current[0] == rows - 1:
             # Reconstruct from this cell
             path: list[tuple[int, int]] = []
-            curr: tuple[int, int] | None = dest
+            curr: tuple[int, int] | None = current
             while curr is not None:
                 path.append(curr)
                 curr = parent[curr]
@@ -80,7 +78,7 @@ grid = [
 start = (0, 0)
 dest = (4, 4)
 
-path = dijkstra_shortest_path_t_b(grid, start, dest)
+path = dijkstra_shortest_path_t_b(grid)
 
 if path:
     # Compute total energy along the path
