@@ -27,7 +27,6 @@ class Solution:
             for item in row:
                 top_area += min(1, item)
 
-        print(top_area)
         return top_area
 
     def _area_front(self, grid: List[List[int]]) -> int:
@@ -36,7 +35,6 @@ class Solution:
         for row in grid:
             front_area += max(row)
 
-        print(front_area)
         return front_area
 
     def _area_side(self, grid: List[List[int]]) -> int:
@@ -48,7 +46,6 @@ class Solution:
                 if value > max_side[count]:
                     max_side[count] = value
 
-        print(sum(max_side))
         return sum(max_side)
 
 
