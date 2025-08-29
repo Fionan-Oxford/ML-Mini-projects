@@ -27,19 +27,15 @@ class Solution:
         longest_count = 0
 
         for l in s:
-            print(f"checking {l} in {sub_string}")
             if l not in sub_string:
                 count += 1
                 sub_string += l
                 if count > longest_count:
-                    print(f"Chaching count of {count}")
                     longest_count = count
             else:  # we have a clash
-                print(f"{l} was a clash in {sub_string} dropping {sub_string[0]}")
                 _, sub_string = sub_string.split(l)
                 sub_string += l
                 count = len(sub_string)
-                print(sub_string)
 
         return longest_count
 

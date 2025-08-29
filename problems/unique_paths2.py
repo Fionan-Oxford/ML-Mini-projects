@@ -33,4 +33,4 @@ class Solution:
             dp[(r, c)] = dfs(r + 1, c) + dfs(r, c + 1)
             return dp[(r, c)]
 
-        return 0
+        return dfs(0, 0)

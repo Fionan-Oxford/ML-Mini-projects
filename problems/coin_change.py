@@ -19,11 +19,8 @@ Output: 0
 
 """
 
-#
-
 from typing import List
 from functools import lru_cache
-import math
 
 
 class Solution:
