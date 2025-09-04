@@ -40,7 +40,6 @@ class Solution:
 
         # lets make a merged array that's just long enough
         for i in range(half):
-            print(merged_array)
             if left == m:
                 merged_array[i] = nums2[right]
                 right += 1

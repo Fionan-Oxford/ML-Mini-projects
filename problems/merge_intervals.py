@@ -40,8 +40,8 @@ class Solution:
 
             for startj, endj in intervals[i + 1 :]:
                 if startj <= endi:
-                    endi = endj
-            out.append([starti, endi])
+                    endi = max(endj, endi)
+            out.append([min(starti, startj), endi])
             current_edge = endi
         return out
 
