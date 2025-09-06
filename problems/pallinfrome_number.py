@@ -28,15 +28,11 @@ class Solution:
         num_string = str(x)
         n = len(num_string)
         mid = math.ceil(n / 2) - 1  # 0 indexing
-        print(mid)
 
         if n % 2 == 0:
             string_start, string_end = num_string[0 : mid + 1], num_string[mid + 1 :]
         else:
             string_start, string_end = num_string[0:mid], num_string[mid + 1 :]
-
-        print(string_start)
-        print(string_end)
 
         return True if string_start[::-1] == string_end else False
 
